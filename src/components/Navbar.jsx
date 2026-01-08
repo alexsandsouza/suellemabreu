@@ -1,3 +1,4 @@
+import './Navbar.css';
 import { useState, useEffect } from 'react';
 
 export default function Navbar() {
@@ -13,16 +14,20 @@ export default function Navbar() {
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
-            <div className="nav-logo">
-                <a href="#">SUELLEN ABREU</a>
+            <div className="nav-container">
+                <a href="#" className="nav-logo">
+                    SUELLEN <span className="text-gold">ABREU</span>
+                </a>
+
+                <ul className="nav-menu">
+                    <li><a href="#about">Quem Somos</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#process">Nosso Processo</a></li>
+                    {/* Blog removed as requested to clone structure but adapt content focus */}
+                    <li><a href="#contact">Contatos</a></li>
+                    <li><a href="#contact" className="nav-cta-btn">Solicitar Orçamento</a></li>
+                </ul>
             </div>
-            <ul className="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Soluções</a></li>
-                <li><a href="#contact">Contato</a></li>
-            </ul>
-            {/* Mobile Toggle can go here */}
         </nav>
     );
 }

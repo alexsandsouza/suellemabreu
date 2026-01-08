@@ -1,26 +1,42 @@
+import './About.css';
+
 export default function About() {
     return (
-        <section id="about" className="section about-section">
-            <div className="about-container">
-                <div className="about-image">
-                    {/* Placeholder for Profile Pic */}
-                    <img src="/suellen-profile.png" alt="Suellen Abreu" className="profile-image" />
+        <section id="about" className="about-section">
+            <div className="container about-grid">
+                <div className="about-image-wrapper">
+                    {/* Using the uploaded profile image */}
+                    <img src="/suellen-profile.png" alt="Suellen Abreu" className="about-img_main" />
+                    <div className="about-experience-card">
+                        <span className="exp-number">+10</span>
+                        <span className="exp-text">Anos de <br />Experiência</span>
+                    </div>
                 </div>
+
                 <div className="about-content">
-                    <span className="badge">SOBRE A SUELLEN</span>
-                    <h2>Muito mais que RH. Uma parceira estratégica.</h2>
-                    <p className="highlight-text">COMPROMETIDA. ESTRATÉGICA. HUMANA.</p>
-                    <p>
-                        Minha trajetória não é apenas sobre preencher vagas, é sobre conectar propósitos.
-                        Como especialista em Análise Comportamental DISC e Consultora de RH, descobri que
-                        o sucesso de qualquer negócio começa nas pessoas.
+                    <h4 className="section-eyebrow">QUEM SOMOS</h4>
+                    <h2 className="section-title">Construindo Equipes de Sucesso</h2>
+
+                    <p className="about-intro">
+                        Desde 2011, atuamos redesenhando a forma como empresas constroem seus times.
+                        O Recrutamento e Seleção é o início de tudo.
                     </p>
-                    <p>
-                        Fundei a <strong>SW Abreu Consultoria</strong> com uma missão clara: levar para empresas
-                        e profissionais as mesmas ferramentas usadas por grandes corporações para identificar
-                        e desenvolver talentos.
+
+                    <p className="about-desc">
+                        Somos uma consultoria especializada em <strong>Recrutamento e Seleção</strong> e <strong>Análise Comportamental DISC</strong>,
+                        localizada em Manaus/AM com atendimento em todo o Brasil. Atuação pautada em proximidade, precisão e propósito.
                     </p>
-                    <button className="secondary-btn" style={{ marginTop: '1.5rem' }}>Conheça o LinkedIn</button>
+
+                    <p className="about-desc">
+                        Entendemos que cada organização tem uma identidade única. Por isso, criamos conexões autênticas
+                        entre talentos e empresas.
+                    </p>
+
+                    <blockquote className="about-quote">
+                        "Encontrar o talento certo é mais do que uma busca, é uma construção conjunta."
+                    </blockquote>
+
+                    <a href="#contact" className="btn btn-primary">Conheça nossos diferenciais</a>
                 </div>
             </div>
         </section>
