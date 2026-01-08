@@ -1,7 +1,7 @@
 .solutions-section {
     padding: 6rem 5%;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
+    background-color: var(--bg-section-alt);
+    color: var(--text-main);
 }
 
 .container {
@@ -23,13 +23,13 @@
 
 .solutions-section h2 {
     font-size: 2.5rem;
-    color: var(--bg-dark-navy);
+    color: var(--text-secondary);
 }
 
 .solutions-intro {
     max-width: 700px;
     margin-bottom: 4rem;
-    color: var(--text-muted-dark);
+    color: var(--text-muted);
 }
 
 .solutions-grid {
@@ -39,7 +39,7 @@
 }
 
 .solution-card {
-    background: var(--bg-off-white);
+    background: var(--bg-card);
     padding: 2.5rem;
     border-radius: 8px;
     /* Slightly rounded, clean */
@@ -48,7 +48,7 @@
 
 .solution-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: var(--card-shadow);
 }
 
 .card-number {
@@ -63,11 +63,31 @@
 .solution-card h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
-    color: var(--bg-dark-navy);
+    color: var(--text-secondary);
 }
 
 .solution-card p {
     font-size: 0.95rem;
-    color: var(--text-muted-dark);
+    color: var(--text-muted);
     line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .solutions-section {
+        text-align: center;
+    }
+
+    .section-line {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .solutions-intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .solution-card {
+        text-align: center;
+    }
 }

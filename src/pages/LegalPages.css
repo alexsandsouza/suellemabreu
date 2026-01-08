@@ -1,0 +1,50 @@
+/* LegalPages.css - Shared styles for legal pages */
+.legal-page {
+    padding: 120px 5% 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    line-height: 1.8;
+}
+
+.legal-page h1 {
+    font-size: 2.5rem;
+    color: var(--primary-gold);
+    margin-bottom: 2rem;
+}
+
+.legal-page h2 {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-gold);
+    padding-left: 1rem;
+}
+
+.legal-page p,
+.legal-page ul {
+    margin-bottom: 1rem;
+    color: var(--text-muted);
+}
+
+.legal-page ul {
+    padding-left: 1.5rem;
+}
+
+.legal-page li {
+    margin-bottom: 0.5rem;
+}
+
+.legal-back-link {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: var(--primary-gold);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.legal-back-link:hover {
+    text-decoration: underline;
+}

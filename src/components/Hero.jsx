@@ -1,11 +1,42 @@
+import { useState, useEffect } from 'react';
 import './Hero.css';
 
 export default function Hero() {
+    const images = [
+        '/hero-bg.png',
+        '/foto1.png',
+        '/foto2.png'
+    ];
+
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <section className="hero-section">
+            {/* Background Slider */}
+            <div className="hero-slider">
+                {images.map((img, index) => (
+                    <div
+                        key={index}
+                        className={`hero-slide ${index === currentImageIndex ? 'active' : ''}`}
+                        style={{ backgroundImage: `url(${img})` }}
+                    ></div>
+                ))}
+            </div>
+
             <div className="hero-overlay"></div>
+
             <div className="hero-content">
-                <span className="hero-category">Consultoria de RH - Manaus / Amazonas | Suellen Abreu</span>
+                <span className="hero-category">
+                    CONSULTORIA EM RH <span className="highlight-separator">|</span> SUELLEN ABREU
+                </span>
                 <h1 className="hero-title">
                     Talentos de Alta Performance <br />
                     para Sua Empresa
@@ -20,20 +51,7 @@ export default function Hero() {
                     <a href="#about" className="btn btn-text">Saiba mais →</a>
                 </div>
 
-                <div className="hero-features">
-                    <div className="feature-item">
-                        <span className="check-icon">✔</span>
-                        <p>Agilidade e eficiência no recrutamento</p>
-                    </div>
-                    <div className="feature-item">
-                        <span className="check-icon">✔</span>
-                        <p>Redução de custos com contratações erradas</p>
-                    </div>
-                    <div className="feature-item">
-                        <span className="check-icon">✔</span>
-                        <p>Acesso a talentos alinhados à cultura</p>
-                    </div>
-                </div>
+                {/* Features moved to separate component */}
             </div>
         </section>
     );

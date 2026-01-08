@@ -1,0 +1,41 @@
+/* ThemeToggle.css */
+.theme-toggle {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: #fff;
+    color: #1F2937;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* Adjust button style in Dark Mode */
+[data-theme='dark'] .theme-toggle {
+    background-color: #1F2937;
+    /* Dark button */
+    color: #F9FAFB;
+    /* Light icon */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    /* Premium Gold Glow */
+}
+
+/* Position to the left of WhatsApp button */
+.theme-toggle {
+    right: 110px;
+    bottom: 30px;
+    /* Aligned with WhatsApp bottom */
+}

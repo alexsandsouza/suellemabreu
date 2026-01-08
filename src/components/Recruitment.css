@@ -1,6 +1,6 @@
 .recruitment-section {
     padding: 6rem 5%;
-    background-color: #fff;
+    background-color: var(--bg-section);
 }
 
 .recruitment-grid {
@@ -11,7 +11,7 @@
 }
 
 .recruitment-content .section-title {
-    color: var(--bg-dark-navy);
+    color: var(--text-secondary);
     margin-bottom: 2rem;
     font-size: 2.2rem;
 }
@@ -24,7 +24,7 @@
     font-size: 1.1rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
-    color: var(--bg-dark-navy);
+    color: var(--text-secondary);
     display: flex;
     align-items: center;
 }
@@ -38,7 +38,7 @@
 }
 
 .recruitment-item p {
-    color: var(--text-muted-dark);
+    color: var(--text-muted);
     font-size: 0.95rem;
     padding-left: 1.5rem;
 }
@@ -87,5 +87,25 @@
 @media (max-width: 900px) {
     .recruitment-grid {
         grid-template-columns: 1fr;
+    }
+
+    .recruitment-content {
+        text-align: center;
+    }
+
+    .recruitment-item h3 {
+        justify-content: center;
+    }
+
+    .recruitment-item p {
+        padding-left: 0;
+    }
+
+    .btn-green {
+        width: 100%;
+        max-width: 320px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

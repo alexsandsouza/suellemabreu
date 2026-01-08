@@ -3,42 +3,106 @@
     position: relative;
     height: 100vh;
     min-height: 700px;
-    background: url('/hero-bg.png') no-repeat center center/cover;
+    /* Background removed for slider */
     display: flex;
     align-items: center;
-    padding-top: 80px;
-    /* Navbar space */
+    padding-top: 100px;
+    overflow: hidden;
+    /* Ensure images don't overflow */
 }
 
-/* Same overlay as before but making sure it matches */
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
 .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
     background: linear-gradient(90deg, rgba(15, 23, 42, 0.95) 0%, rgba(15, 23, 42, 0.7) 100%);
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
+    max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 5%;
     color: #fff;
+    text-align: left;
 }
 
 .hero-category {
-    display: block;
+    display: inline-block;
     font-size: 0.9rem;
     color: var(--primary-gold);
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 700;
+    letter-spacing: 3px;
+    font-weight: 800;
     margin-bottom: 1.5rem;
+    width: auto;
+    line-height: 1.5;
+    position: relative;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+    /* Gold Glow Effect */
+    background: linear-gradient(90deg, #D4AF37, #F3E5AB, #D4AF37);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+    animation: shine 5s linear infinite;
+}
+
+.highlight-separator {
+    margin: 0 10px;
+    color: var(--text-muted);
+    -webkit-text-fill-color: #cbd5e1;
+    /* Reset fill for separator */
+}
+
+@keyframes shine {
+    to {
+        background-position: 200% center;
+    }
 }
 
 .hero-title {
+    margin-left: 0;
+    padding-left: 0;
     font-size: 3.5rem;
     line-height: 1.2;
     margin-bottom: 2rem;
     font-weight: 800;
+}
+
+.hero-content {
+    text-align: left;
+    /* Ensure all content is left aligned */
 }
 
 .hero-description {
@@ -95,18 +159,65 @@
     line-height: 1.4;
 }
 
-@media(max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
+@media(max-width: 900px) {
+    .hero-section {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 120px;
+        /* More space for navbar */
+        padding-bottom: 4rem;
+        background-position: center top;
+        text-align: center;
+        /* Center align on mobile for premium focus */
     }
 
-    .hero-features {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    .hero-content {
+        padding: 0 1.5rem;
+        text-align: center;
+    }
+
+    .hero-category {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
+        line-height: 1.5;
+    }
+
+    .highlight-separator {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.35;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+        margin-bottom: 2.5rem;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
     }
 
     .hero-actions {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+        width: 100%;
     }
+
+    .btn-primary {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    /* Adjust features grid if it existed, but we removed it. 
+       If Feature Cards are below, we don't need this ruleset here anymore. */
 }

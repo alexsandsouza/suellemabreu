@@ -6,7 +6,7 @@ export default function About() {
             <div className="container about-grid">
                 <div className="about-image-wrapper">
                     {/* Using the uploaded profile image */}
-                    <img src="/suellen-profile.png" alt="Suellen Abreu" className="about-img_main" />
+                    <img src="/Suellem_perfil.png" alt="Suellen Abreu" className="about-img_main" />
                     <div className="about-experience-card">
                         <span className="exp-number">+10</span>
                         <span className="exp-text">Anos de <br />Experiência</span>
@@ -31,10 +31,6 @@ export default function About() {
                         Entendemos que cada organização tem uma identidade única. Por isso, criamos conexões autênticas
                         entre talentos e empresas.
                     </p>
-
-                    <blockquote className="about-quote">
-                        "Encontrar o talento certo é mais do que uma busca, é uma construção conjunta."
-                    </blockquote>
 
                     <a href="#contact" className="btn btn-primary">Conheça nossos diferenciais</a>
                 </div>

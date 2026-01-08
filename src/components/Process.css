@@ -1,0 +1,194 @@
+.process-section {
+    padding: 6rem 0;
+    background-color: var(--bg-section-alt);
+    overflow: hidden;
+}
+
+.process-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 5rem auto;
+    padding: 0 1rem;
+}
+
+.process-eyebrow {
+    font-size: 0.9rem;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.process-title {
+    font-size: 2rem;
+    color: var(--text-secondary);
+    line-height: 1.3;
+}
+
+/* Timeline Setup */
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* Central Line */
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background-color: var(--border-color);
+    height: 100%;
+}
+
+.timeline-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-gold) 0%, var(--bg-dark-navy) 100%);
+}
+
+.timeline-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+    width: 100%;
+}
+
+/* Left vs Right logic */
+.timeline-item.right {
+    flex-direction: row-reverse;
+}
+
+.timeline-item.left {
+    flex-direction: row;
+}
+
+/* Content Box */
+.timeline-content {
+    width: 45%;
+    background: var(--bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    position: relative;
+    text-align: left;
+}
+
+/* Arrow pointer to line - Optional but nice */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.timeline-item.left .timeline-content::before {
+    right: -10px;
+    border-left: 10px solid var(--bg-card);
+}
+
+.timeline-item.right .timeline-content::before {
+    left: -10px;
+    border-right: 10px solid var(--bg-card);
+}
+
+/* Typography */
+.step-phase {
+    font-size: 0.85rem;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.step-title {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+.step-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Marker (Circle on line) */
+.timeline-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: var(--bg-card);
+    border: 3px solid var(--primary-gold);
+    /* Gold border to match theme */
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marker-icon-wrapper {
+    color: var(--primary-gold);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline-line {
+        display: none;
+        /* Hide line on mobile for cleaner centered look */
+    }
+
+    .timeline-item,
+    .timeline-item.right,
+    .timeline-item.left {
+        flex-direction: column-reverse;
+        /* Marker goes to top */
+        align-items: center;
+        margin: 0 0 3rem 0;
+        width: 100%;
+    }
+
+    .timeline-marker {
+        position: static;
+        /* No longer absolute on line */
+        transform: none;
+        margin-bottom: 1.5rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .timeline-content {
+        width: 100%;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .timeline-content::before {
+        display: none;
+        /* Hide arrows */
+    }
+}

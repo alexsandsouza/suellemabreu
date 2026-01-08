@@ -1,0 +1,102 @@
+.differentials-section {
+    padding: 6rem 0;
+    width: 100%;
+    background-color: var(--bg-section);
+}
+
+.differentials-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 5%;
+}
+
+.differentials-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.differentials-eyebrow {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--primary-gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.differentials-title {
+    font-size: 2.2rem;
+    color: var(--text-secondary);
+    line-height: 1.3;
+}
+
+.differentials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.differential-card {
+    background-color: var(--bg-card);
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.differential-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+    border-color: rgba(212, 175, 55, 0.2);
+}
+
+.differential-icon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--primary-gold);
+}
+
+.differential-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.differential-card-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+    .differentials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .differentials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .differentials-title {
+        font-size: 1.8rem;
+    }
+}

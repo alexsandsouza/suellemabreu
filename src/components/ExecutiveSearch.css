@@ -1,0 +1,126 @@
+/* ExecutiveSearch.css */
+.executive-section {
+    padding: 6rem 5%;
+    background-color: #fff;
+    /* White background as per reference */
+    overflow: hidden;
+    /* For shapes */
+}
+
+/* Dark Mode Adaptation */
+[data-theme='dark'] .executive-section {
+    background-color: var(--bg-section);
+}
+
+.executive-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* Image Side */
+.executive-image-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center vertically too */
+}
+
+.executive-img {
+    position: relative;
+    z-index: 2;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    /* Fully rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    /* Nice shadow since background is gone */
+}
+
+/* Shapes Removed */
+
+/* Content Side */
+.executive-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-secondary);
+    /* Dark text */
+    margin-bottom: 2.5rem;
+}
+
+.executive-item {
+    margin-bottom: 2rem;
+}
+
+.executive-item h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.executive-item p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-left: 0;
+}
+
+/* Reuse the green button style if possible, or define here */
+.btn-green {
+    background-color: #25D366;
+    color: #fff;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s, background-color 0.2s;
+    margin-top: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-green:hover {
+    background-color: #128C7E;
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .executive-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .executive-image-wrapper {
+        margin-bottom: 3rem;
+    }
+
+    .blob-shape {
+        width: 250px;
+        height: 250px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .shape-1 {
+        margin-left: -40px;
+    }
+
+    .shape-2 {
+        margin-left: 40px;
+    }
+
+    .executive-item p {
+        text-align: center;
+        /* Or justify if cleaner */
+    }
+
+    .btn-green {
+        width: 100%;
+        max-width: 320px;
+    }
+}

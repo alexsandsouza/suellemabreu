@@ -2,26 +2,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap');
 
 :root {
-  /* New Palette based on "Premium RH" Reference */
+  /* --- Palette --- */
   --primary-gold: #D4AF37;
-  /* The Gold/Mustard accent */
   --primary-gold-hover: #b5952f;
 
-  --bg-dark-navy: #1C2636;
-  /* Deep Corporate Blue-Grey */
-  --bg-dark-overlay: rgba(28, 38, 54, 0.85);
+  --color-white: #ffffff;
+  --color-black: #000000;
 
-  --bg-light: #FFFFFF;
-  --bg-off-white: #F9FAFB;
+  --navy-900: #0F1218;
+  /* Deepest */
+  --navy-800: #1C2636;
+  /* Dark Navy */
+  --navy-700: #374151;
 
-  --text-dark: #1F2937;
-  /* For light backgrounds */
+  --gray-50: #F9FAFB;
+  --gray-100: #F3F4F6;
+  --gray-800: #1F2937;
+  --gray-900: #111827;
+
+  /* --- Semantic Themes (Light Mode Default) --- */
+  --bg-body: var(--color-white);
+  --bg-section: var(--color-white);
+  --bg-section-alt: var(--gray-50);
+  --bg-card: var(--color-white);
+
+  --text-main: var(--gray-800);
+  --text-secondary: var(--navy-700);
+  --text-muted: #6B7280;
   --text-light: #F9FAFB;
-  /* For dark backgrounds */
-  --text-muted-dark: #6B7280;
+  /* Always light text */
+
+  --border-color: #E5E7EB;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  --nav-bg-scrolled: rgba(255, 255, 255, 0.95);
+  --nav-text: var(--gray-800);
 
   --font-heading: 'Montserrat', sans-serif;
   --font-body: 'Open Sans', sans-serif;
+
+  /* Legacy mapping for components not yet updated */
+  --bg-dark-navy: var(--navy-800);
+  --text-dark: var(--text-main);
+  --bg-light: var(--bg-body);
+  --bg-off-white: var(--bg-section-alt);
+}
+
+[data-theme='dark'] {
+  /* --- Dark Mode Overrides --- */
+  --bg-body: var(--navy-900);
+  --bg-section: var(--navy-900);
+  --bg-section-alt: var(--navy-800);
+  --bg-card: var(--navy-800);
+
+  --text-main: #F3F4F6;
+  --text-secondary: #D1D5DB;
+  --text-muted: #9CA3AF;
+
+  --border-color: #374151;
+  --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  --nav-bg-scrolled: rgba(28, 38, 54, 0.95);
+  --nav-text: #F3F4F6;
+
+  /* Legacy mapping */
+  --text-dark: #F3F4F6;
+  --bg-light: #111827;
+  --bg-off-white: #1f2937;
 }
 
 *,
@@ -35,10 +82,11 @@
 body {
   margin: 0;
   font-family: var(--font-body);
-  color: var(--text-dark);
-  background-color: var(--bg-light);
+  color: var(--text-main);
+  background-color: var(--bg-body);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1,

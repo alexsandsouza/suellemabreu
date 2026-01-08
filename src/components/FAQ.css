@@ -1,0 +1,131 @@
+/* FAQ.css */
+.faq-section {
+    background-color: #111827;
+    /* Very dark background similar to reference */
+    padding: 6rem 5%;
+    color: #fff;
+}
+
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.faq-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.faq-badge {
+    display: inline-block;
+    background-color: #3b82f6;
+    /* Blue pill from reference */
+    background-color: var(--primary-gold);
+    /* Adapting to project Gold */
+    color: #fff;
+    padding: 0.4rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.faq-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #fff;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* List Items */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.faq-item:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    padding: 1.8rem 0;
+    position: relative;
+}
+
+.faq-number {
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 1.5rem;
+    font-size: 1.1rem;
+    min-width: 25px;
+}
+
+.faq-question h3 {
+    flex: 1;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+    text-align: left;
+    padding-right: 2rem;
+}
+
+.faq-toggle-icon {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #fff;
+    line-height: 1;
+}
+
+/* Answer Area */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    /* Approximate max height */
+    padding-bottom: 2rem;
+    opacity: 1;
+}
+
+.faq-item.active .faq-question h3 {
+    color: var(--primary-gold);
+}
+
+.faq-answer p {
+    color: #9ca3af;
+    /* Gray-400 */
+    line-height: 1.6;
+    margin-left: 3rem;
+    /* Align with text, skipping number */
+    font-size: 0.95rem;
+    max-width: 90%;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .faq-title {
+        font-size: 1.8rem;
+    }
+
+    .faq-answer p {
+        margin-left: 0;
+        max-width: 100%;
+    }
+}

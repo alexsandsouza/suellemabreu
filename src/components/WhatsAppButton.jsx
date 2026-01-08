@@ -1,5 +1,5 @@
 import './WhatsAppButton.css';
-import { MessageCircle } from 'lucide-react'; // Or just use a text/emoji if no icon lib
+
 /* We'll just use simple text/svg for now to avoid dependency issues if lucide isn't installed */
 
 export default function WhatsAppButton() {

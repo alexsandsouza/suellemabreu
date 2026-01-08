@@ -4,23 +4,23 @@ export default function Services() {
     const solutions = [
         {
             id: "01.",
-            title: "Recrutamento & Seleção",
-            desc: "Reunião de alinhamento de Perfil, divulgação estratégica e hunting para encontrar o talento ideal."
+            title: "Recrutamento e Seleção",
+            desc: "Diagnóstico profundo + busca ativa + cultura organizacional = candidatos alinhados de verdade. Aqui, não é só contratar, é construir time."
         },
         {
             id: "02.",
-            title: "Análise DISC",
-            desc: "Mapeamento comportamental profundo para alinhar soft skills com a cultura da sua empresa."
+            title: "Seleção por Competências & Perfil Comportamental",
+            desc: "Avaliamos além do CV: perfil comportamental, fit cultural, soft skills e técnica. Ferramentas de avaliação que revelam o verdadeiro potencial dos profissionais, ajudando a tomar decisões embasadas e estratégicas."
         },
         {
             id: "03.",
-            title: "Treinamentos",
-            desc: "Capacitação de líderes e equipes para aumentar engajamento e produtividade."
+            title: "Treinamentos & Desenvolvimento",
+            desc: "Capacitação de líderes e equipes para aumentar engajamento e produtividade. Transformamos potencial em performance."
         },
         {
             id: "04.",
             title: "Consultoria de RH",
-            desc: "Estruturação completa do setor de RH, desde a integração até a avaliação de desempenho."
+            desc: "Estruturação completa do setor de RH, desde a integração até a avaliação de desempenho, alinhado à estratégia do negócio."
         }
     ];
 
