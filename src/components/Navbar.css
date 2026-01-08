@@ -1,18 +1,20 @@
-/* Navbar.css */
+/* Navbar.css Updates */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     transition: all 0.3s ease;
     background: transparent;
+    /* Default transparent */
 }
 
+/* Ensure navbar has background on scroll or always if requested, 
+   but for now let's keep the premium feel of transparent on Hero */
 .navbar.scrolled {
     background: var(--bg-dark-navy);
-    padding: 1rem 0;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -25,32 +27,22 @@
     align-items: center;
 }
 
-.nav-logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-family: var(--font-heading);
-}
-
-.text-gold {
-    color: var(--primary-gold);
-}
-
+/* Fix alignment of menu items */
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2.5rem;
+    gap: 2rem;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-menu a {
+    text-decoration: none;
     color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
     font-size: 0.95rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+    ttansition: color 0.3s;
 }
 
 .nav-menu a:hover {
@@ -58,11 +50,11 @@
 }
 
 .nav-cta-btn {
-    padding: 0.8rem 1.8rem;
-    border: 2px solid var(--primary-gold);
+    padding: 0.6rem 1.4rem;
+    border: 1px solid var(--primary-gold);
     color: var(--primary-gold) !important;
     border-radius: 4px;
-    transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 .nav-cta-btn:hover {
@@ -70,9 +62,9 @@
     color: #fff !important;
 }
 
+/* Mobile responsive fixes */
 @media (max-width: 900px) {
     .nav-menu {
         display: none;
-        /* Mobile menu needed */
     }
 }
