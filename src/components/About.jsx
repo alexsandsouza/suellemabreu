@@ -4,7 +4,7 @@ export default function About() {
             <div className="about-container">
                 <div className="about-image">
                     {/* Placeholder for Profile Pic */}
-                    <div className="profile-placeholder"></div>
+                    <img src="/suellen-profile.png" alt="Suellen Abreu" className="profile-image" />
                 </div>
                 <div className="about-content">
                     <span className="badge">SOBRE A SUELLEN</span>
