@@ -1,31 +1,22 @@
+import './Hero.css';
+
 export default function Hero() {
     return (
-        <section id="home" className="hero">
-            <div className="hero-content">
-                <span className="badge">TURMAS ABERTAS</span>
+        <section id="home" className="hero-section">
+            <div className="hero-overlay"></div>
+            <div className="hero-content-container">
+                <h4 className="hero-eyebrow">Acreditamos que as empresas</h4>
                 <h1 className="hero-title">
-                    Gestão de Pessoas de <br />
-                    <span className="highlight">Alta Performance</span>
+                    só crescem com as <br />
+                    pessoas certas <br />
+                    no lugar certo
                 </h1>
-                <p className="hero-subtitle">
-                    Transforme o potencial da sua empresa com o <strong>Método SW Abreu</strong>.
-                    Una a precisão da Análise DISC com estratégias humanizadas para construir times que geram lucro e harmonia.
+                <p className="hero-description">
+                    Consultoria estratégica de RH e Gestão de Pessoas para negócios que buscam alta performance.
                 </p>
-                <div className="hero-actions">
-                    <button className="cta-button primary-btn">Quero uma Consultoria</button>
-                    <button className="secondary-btn">Conheça o Método</button>
-                </div>
-                <div className="trust-indicators">
-                    <p>+ de 20 Empresas Atendidas</p>
-                </div>
-            </div>
-            <div className="hero-visual">
-                {/* Placeholder for Client Photo inspired by reference site */}
-                <div className="image-placeholder-container">
-                    <div className="gradient-sphere"></div>
-                    <div className="glass-card absolute-card">
-                        <span>⭐ Especialista DISC</span>
-                    </div>
+                <div className="hero-buttons">
+                    <a href="#about" className="btn btn-primary">Sobre Nós</a>
+                    <a href="#contact" className="btn btn-secondary" style={{ marginLeft: '1rem' }}>Fale Conosco</a>
                 </div>
             </div>
         </section>

@@ -1,40 +1,51 @@
-import { CheckCircle, Users, TrendingUp } from 'lucide-react'; // Assuming we'll add lucide-react later or replace with SVGs
+import './Services.css';
 
 export default function Services() {
-    const services = [
+    const solutions = [
         {
-            title: "Consultoria Corporativa",
-            description: "Diagnóstico completo do seu RH para reduzir turnover e aumentar produtividade.",
-            icon: "🏢"
+            id: "01.",
+            title: "Recrutamento & Seleção",
+            desc: "Reunião de alinhamento de Perfil, divulgação estratégica e hunting para encontrar o talento ideal."
         },
         {
-            title: "Análise Comportamental DISC",
-            description: "Mapeamento de perfis para colocar a pessoa certa no lugar certo.",
-            icon: "📊"
+            id: "02.",
+            title: "Análise DISC",
+            desc: "Mapeamento comportamental profundo para alinhar soft skills com a cultura da sua empresa."
         },
         {
-            title: "Palestras & Treinamentos",
-            description: "Capacitação de líderes e equipes para alta performance.",
-            icon: "🎤"
+            id: "03.",
+            title: "Treinamentos",
+            desc: "Capacitação de líderes e equipes para aumentar engajamento e produtividade."
+        },
+        {
+            id: "04.",
+            title: "Consultoria de RH",
+            desc: "Estruturação completa do setor de RH, desde a integração até a avaliação de desempenho."
         }
     ];
 
     return (
-        <section id="services" className="section services-section">
-            <div className="section-header text-center">
-                <h2>Soluções Estratégicas</h2>
-                <p className="section-subtitle">Como podemos elevar o nível da sua empresa hoje?</p>
-            </div>
+        <section id="services" className="solutions-section">
+            <div className="container">
+                <div className="section-title-wrapper">
+                    <span className="section-line"></span>
+                    <h2>Soluções</h2>
+                </div>
 
-            <div className="services-grid">
-                {services.map((service, index) => (
-                    <div key={index} className="service-card">
-                        <div className="service-icon">{service.icon}</div>
-                        <h3>{service.title}</h3>
-                        <p>{service.description}</p>
-                        <a href="#contact" className="text-link">Saiba mais →</a>
-                    </div>
-                ))}
+                <p className="solutions-intro">
+                    Todo processo é desenvolvido por profissionais formados na área da Psicologia com
+                    Pós Graduação na área e RH e Gestão de Negócios.
+                </p>
+
+                <div className="solutions-grid">
+                    {solutions.map((item) => (
+                        <div key={item.id} className="solution-card">
+                            <span className="card-number">{item.id}</span>
+                            <h3>{item.title}</h3>
+                            <p>{item.desc}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
         </section>
     );
